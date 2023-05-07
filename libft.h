@@ -6,7 +6,7 @@
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 00:51:14 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/02/20 11:41:36 by sshimizu         ###   ########.fr       */
+/*   Updated: 2023/05/08 01:20:28 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdbool.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -75,15 +76,12 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 int					ft_printf(const char *str, ...);
-int					print_c(char c, bool *options);
-int					print_s(char *s, bool *options);
-int					print_d(int n, bool *options);
-int					print_u(unsigned int n, bool *options);
-int					print_x(unsigned long n, bool ucase, bool pointer,
-						bool *options);
-int					print_per(void);
 void				*ft_free(void **p);
 void				ft_swap(int *a, int *b);
-void				ft_bubble_sort(int *array, size_t size);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
+int					ft_search_index(int val, int *array, int size);
+int					ft_isspace(char c);
+char				*get_next_line(int fd);
 
 #endif

@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubble_sort.c                                   :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 11:40:10 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/02/20 11:41:40 by sshimizu         ###   ########.fr       */
+/*   Created: 2023/02/21 03:26:11 by sshimizu          #+#    #+#             */
+/*   Updated: 2023/02/21 03:26:30 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bubble_sort(int *array, size_t size)
+int	ft_max(int a, int b)
 {
-	bool	swapped;
-	size_t	i;
-
-	swapped = true;
-	i = 0;
-	while (swapped)
-	{
-		swapped = false;
-		while (i < size - 1)
-		{
-			if (array[i] > array[i + 1])
-			{
-				ft_swap(&array[i], &array[i + 1]);
-				swapped = true;
-			}
-			i++;
-		}
-		i = 0;
-		size--;
-	}
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }

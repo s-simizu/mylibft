@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_search_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 10:42:55 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/02/21 00:32:13 by sshimizu         ###   ########.fr       */
+/*   Created: 2023/02/21 19:12:04 by sshimizu          #+#    #+#             */
+/*   Updated: 2023/02/21 19:16:14 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_free(void **p)
+int	ft_search_index(int val, int *array, int size)
 {
-	if (!p)
-		return (NULL);
-	free(*p);
-	*p = NULL;
-	return (*p);
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (array[i] == val)
+			return (i);
+		i++;
+	}
+	return (-1);
 }

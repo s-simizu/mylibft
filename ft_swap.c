@@ -6,7 +6,7 @@
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:39:42 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/02/20 11:39:50 by sshimizu         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:29:52 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ void	ft_swap(int *a, int *b)
 {
 	int	tmp;
 
+	if (!a || !b)
+		return ;
 	tmp = *a;
 	*a = *b;
 	*b = tmp;

@@ -6,13 +6,13 @@
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 00:32:41 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/01/31 21:40:42 by sshimizu         ###   ########.fr       */
+/*   Updated: 2023/02/27 23:50:21 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	print_hex(unsigned long n, bool ucase)
+static int	print_hex(unsigned long n, bool ucase)
 {
 	int	len;
 	int	hex;
@@ -52,7 +52,7 @@ int	print_x(unsigned long n, bool ucase, bool pointer, bool *options)
 	return (len);
 }
 
-int	print_digit(unsigned int abs)
+static int	print_digit(unsigned int abs)
 {
 	int	len;
 

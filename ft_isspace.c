@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshimizu <sshimizu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 10:42:55 by sshimizu          #+#    #+#             */
-/*   Updated: 2023/02/21 00:32:13 by sshimizu         ###   ########.fr       */
+/*   Created: 2023/02/23 21:22:20 by sshimizu          #+#    #+#             */
+/*   Updated: 2023/02/23 21:22:38 by sshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_free(void **p)
+int	ft_isspace(char c)
 {
-	if (!p)
-		return (NULL);
-	free(*p);
-	*p = NULL;
-	return (*p);
+	return (c == ' ' || c == '\t' || c == '\v' || c == '\n' || c == '\r'
+		|| c == '\f');
 }
